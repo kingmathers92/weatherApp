@@ -13,6 +13,7 @@ h3 {
     font-weight: 400;
 }
 
+
 .weather-app {
     min-height: 100vh;
     background-image: url(./images/day/cloudy.jpg);
@@ -70,6 +71,10 @@ h3 {
 .temp {
     font-size: 7em;
     margin: 0;
+}
+
+.temp:hover {
+    cursor: pointer;
 }
 
 .weather img {
