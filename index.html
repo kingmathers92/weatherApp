@@ -1,63 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="./styles.css">
-    <script src="./script.js"></script>
-    <script src="https://kit.fontawesome.com/4e3cd221df.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/4e3cd221df.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="weather-app">
-        <div class="container">
-            <h3 class="brand">the weather</h3>
-            <div>
-                <h1 class="temp">16&#176;</h1>
-                <div class="city-time">
-                    <h1 class="name">Tunis</h1>
-                    <small>
-                        <span class="time">00:00</span>
-                        -
-                        <span class="date">Monday Mar 16</span>
-                    </small>
-                </div>
-                <div class="weather">
-                    <img src="./icons/day/113.png" alt="icon" class="icon" width="50" height="50">
-                    <span class="condition">Clear</span>
-                </div>
-            </div>
+      <div class="container">
+        <h3 class="brand">the weather</h3>
+        <div>
+          <h1 class="temp">20&#176;</h1>
+          <div class="city-time">
+            <h1 class="name">Tunis</h1>
+            <small>
+              <span class="time">00:00</span>
+              -
+              <span class="date">Monday Mar 16</span>
+            </small>
+          </div>
+          <div class="weather">
+            <img
+              src="./icons/day/113.png"
+              alt="icon"
+              class="icon"
+              width="50"
+              height="50"
+            />
+            <span class="condition">Clear</span>
+          </div>
         </div>
-        <div class="panel">
-            <form id="locationInput">
-                <input type="text" class="search" placeholder="Search location">
-                <button class="submit" type="submit"><i class="fas fa-search"></i>
-                </button>
-            </form>
+      </div>
+      <div class="panel">
+        <form id="locationInput">
+          <input type="text" class="search" placeholder="Search location" />
+          <button class="submit" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
 
-            <ul class="cities">
-                <li class="city">Tunis</li>
-                <li class="city">Berlin</li>
-                <li class="city">Rio</li>
-                <li class="city">London</li>
-            </ul>
-            <ul class="details">
-                <h4>Weather Details</h4>
-                <li>
-                    <span>Clear</span>
-                    <span class="cloud">78%</span>
-                </li>
-                <li>
-                    <span>Himidity</span>
-                    <span class="humidity">42%</span>
-                </li>
-                <li>
-                    <span>Wind</span>
-                    <span class="wind">5km/h</span>
-                </li>
-            </ul>
-        </div>
+        <ul class="cities">
+          <li class="city">Algiers</li>
+          <li class="city">Berlin</li>
+          <li class="city">Rio</li>
+          <li class="city">Moscow</li>
+        </ul>
+        <ul class="details">
+          <h4>Weather Details</h4>
+          <li>
+            <span>Clear</span>
+            <span class="cloud">78%</span>
+          </li>
+          <li>
+            <span>Humidity</span>
+            <span class="humidity">42%</span>
+          </li>
+          <li>
+            <span>Wind</span>
+            <span class="wind">5km/h</span>
+          </li>
+        </ul>
+      </div>
     </div>
-</body>
+  </body>
 </html>
