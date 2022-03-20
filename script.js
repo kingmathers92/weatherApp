@@ -12,6 +12,7 @@ const form = document.getElementById('locationInput');
 const search = document.querySelector('.search');
 const btn = document.querySelector('.submit');
 const cities = document.querySelectorAll('.city');
+const degrees = document.getElementById('temperature');
 
 
 let cityInput = "Tunis";
@@ -21,7 +22,7 @@ cities.forEach((city) => {
     city.addEventListener('click', (e) => {
         cityInput = e.target.innerHTML;
         fetchWeatherData();
-        app.style.opcaity = "0";
+        app.style.opacity = "0";
     });
 })
 
@@ -33,13 +34,10 @@ form.addEventListener('submit', (e) => {
         cityInput = search.value;
         fetchWeatherData();
         search.value = "";
-        app.style.opcaity = "0";
+        app.style.opacity = "0";
     }
     e.preventDefault();
 })
-
-
-
 
 
 function dayOfTheWeek(day, month, year) {
@@ -69,13 +67,13 @@ function fetchWeatherData() {
 
         const date = data.location.localtime;
         const y = parseInt(date.substr(0, 4));
-        const m = parseInt(date.substr(5, 2));
-        const d = parseInt(date.substr(8, 2));
+        const d = parseInt(date.substr(5, 2));
+        const m = parseInt(date.substr(8, 2));
         const time = date.substr(11);
 
 
 
-        dateOutput.innerHTML = `${dayOfTheWeek(d, m, y)} ${d}, ${m}, ${y}`;
+        dateOutput.innerHTML = `${dayOfTheWeek(d, m, y)} ${d}, ${m} ${y}`;
         timeOutput.innerHTML = time;
 
         nameOutput.innerHTML = data.location.name;
@@ -142,7 +140,7 @@ function fetchWeatherData() {
         ) {
             app.style.backgroundImage = `
             url(./images/${timeOfDay}/rainy.jpg)`;
-            btn.style.background = "#fa6d1b";
+            btn.style.background = "#647d75";
             if (timeOfDay == "night") {
                 btn.style.background = "#325c80";
             }
@@ -154,16 +152,15 @@ function fetchWeatherData() {
                 btn.style.background = "#1b1b1b";
             }
         }
-        app.style.opcaity = "1";
+        app.style.opacity = "1";
 
         })
-
         .catch(() => {
             alert('Location not found, try again please');
-            app.style.opcaity = "1";
+            app.style.opacity = "1";
         });
 }
 
 fetchWeatherData();
 
-app.style.opcaity = "1";
+app.style.opacity = "1";
