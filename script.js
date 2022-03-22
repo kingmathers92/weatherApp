@@ -146,7 +146,7 @@ function fetchWeatherData() {
             }
         } else {
             app.style.backgroundImage = `
-            url(./images/${timeOfDay}/snowy.jpg)`;
+            url(./images/${timeOfDay}/snow.jpg)`;
             btn.style.background = "#4d72aa";
             if (timeOfDay == "night") {
                 btn.style.background = "#1b1b1b";
