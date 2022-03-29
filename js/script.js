@@ -14,7 +14,6 @@ const form = document.getElementById('locationInput');
 const search = document.querySelector('.search');
 const btn = document.querySelector('.submit');
 const cities = document.querySelectorAll('.city');
-const degrees = document.getElementById('temperature');
 
 
 let cityInput = "Tunis";
