@@ -1,5 +1,3 @@
-import API_KEY from "./apikey";
-
 const app = document.querySelector('.weather-app');
 const temp = document.querySelector('.temp');
 const dateOutput = document.querySelector('.date');
